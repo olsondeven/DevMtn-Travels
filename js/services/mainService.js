@@ -22,7 +22,17 @@ angular.module('devmtnTravel').service('mainSrv', function(){
         desc: "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harbourfront Opera House, with a distinctive sail-like design. Massive Darling Harbour and Circular Qua",
         id: 11223489,
         price: 1112
+    }];
 
+    this.correctObj = function(id){
+      console.log('service', id);
+      for(var i = 0; i < this.travelInfo.length; i++){
+        console.log('hit', id);
+        if(this.travelInfo[i].id == id){
+          console.log('wow', id);
+          return this.travelInfo[i];
+        }
+      }
+    };
 
-    }]
-})
+});
